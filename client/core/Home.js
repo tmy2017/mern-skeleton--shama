@@ -47,5 +47,5 @@ class Home extends Component {
 Home.propTypes = {
   classes: PropTypes.object.isRequired
 };
-export default Home;
-//export default withStyles(styles)(Home)
+//export default Home;
+export default withStyles(styles)(Home);
