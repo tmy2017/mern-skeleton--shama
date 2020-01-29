@@ -3,11 +3,9 @@ import PropTypes from "prop-types";
 
 class LearningProgress extends Component {
   state = {
-    learningprogress : []
+    learningprogress: []
+  };
+  render() {
+    return "ef";
   }
-  render()
-  {
-    return ()
-  }
-
 }

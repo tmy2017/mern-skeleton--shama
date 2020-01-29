@@ -43,7 +43,7 @@ class Home extends Component {
     );
   }
 }
-
+//gosh where does this propType (lower camel case, NOT PropType) come from? zzQ _05._y20.0129-2207+0100
 Home.propTypes = {
   classes: PropTypes.object.isRequired
 };
