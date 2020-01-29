@@ -23,7 +23,7 @@ const Menu = withRouter(({ history }) => (
           <HomeIcon />
         </IconButton>
       </Link>
-      <Link to="/users">
+      <Link to="/learning_progress">
         <Button style={isActive(history, "/learning_progress")}>
           learning progress
         </Button>
