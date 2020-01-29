@@ -16,18 +16,17 @@ const Menu = withRouter(({ history }) => (
   <AppBar position="static">
     <Toolbar>
       <Typography type="title" color="inherit">
-        MERN Skeleton azefa
+        Developer Roadmap RPG
       </Typography>
-      <Link to="/users">
-        <Button style={isActive(history, "/users")}>xUsers</Button>
-      </Link>
       <Link to="/">
         <IconButton aria-label="Home" style={isActive(history, "/")}>
           <HomeIcon />
         </IconButton>
       </Link>
       <Link to="/users">
-        <Button style={isActive(history, "/users")}>learning progress</Button>
+        <Button style={isActive(history, "/learning_progress")}>
+          learning progress
+        </Button>
       </Link>
 
       <Link to="/users">
