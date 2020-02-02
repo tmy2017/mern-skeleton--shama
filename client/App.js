@@ -6,6 +6,7 @@ import { indigo, pink } from "material-ui/colors";
 import { hot } from "react-hot-loader";
 
 // Create a theme instance.
+//zzJSS pattern! zzmaterial-ui - zzCSS-in-zzJS ((ℹ️ zzpp._05._y20.0129-2345))
 const theme = createMuiTheme({
   palette: {
     primary: {
