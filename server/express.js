@@ -78,7 +78,7 @@ app.get("*", (req, res) => {
   });
   const generateClassName = createGenerateClassName();
   const context = {};
-
+  const a = "azefzfe";
   // zzSSR here! zz20200112-2248+0100
   //really from zzreact, zzserver part ALREADY zzrender the zzmarkup!
   const markup = ReactDOMServer.renderToString(
@@ -95,6 +95,11 @@ app.get("*", (req, res) => {
       </JssProvider>
     </StaticRouter>
   );
+  // after generated zzmarkup, then check in that markup, does it need zzredirect (p.322) ((zzgosh zzcomplex ((ℹ️ zzpp._05._y20.0202-2107 )) zzFullStackReactProject.zzmern.zzbook
+  // it's about if access directly from server - then zzprivate.zzroute will redirect to zzsignin page...
+  if (a != null) {
+    console.log("azef");
+  }
   if (context.url) {
     return res.redirect(303, context.url);
   }

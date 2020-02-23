@@ -68,5 +68,5 @@ UserSchema.methods = {
     return Math.round(new Date().valueOf() * Math.random()) + "";
   }
 };
-
+//zzmagic! zzmongoose zzwow
 export default mongoose.model("User", UserSchema);

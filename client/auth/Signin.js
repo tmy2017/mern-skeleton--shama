@@ -54,6 +54,7 @@ class Signin extends Component {
       if (data.error) {
         this.setState({ error: data.error });
       } else {
+        //cb = callback _07._y20.0213-0809+0100
         auth.authenticate(data, () => {
           this.setState({ redirectToReferrer: true });
         });
