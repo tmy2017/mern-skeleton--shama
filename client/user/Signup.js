@@ -52,6 +52,7 @@ class Signup extends Component {
   };
 
   handleChange = name => event => {
+    //zzclosure! or "zzpartialApply" ! ((⚪️ zzp._08._y20.0223-1721  zzUseful ))
     this.setState({ [name]: event.target.value });
   };
 
@@ -74,7 +75,25 @@ class Signup extends Component {
   render() {
     const { classes } = this.props;
     return (
+      // need zzdiv here zzgosh ((❇️ zzppp._08._y20.0223-1736 )) // due to zzdialog? hmm
+      // zzdialog can be 1st or 2nd, seems sequence does not matter
       <div>
+        <Dialog open={this.state.open} disableBackdropClick={false}>
+          <DialogTitle>New Account</DialogTitle>
+          <DialogContent>
+            <DialogContentText>
+              New account successfully created.
+            </DialogContentText>
+          </DialogContent>
+          <DialogActions>
+            <Link to="/signin">
+              <Button color="primary" autoFocus="autoFocus" variant="raised">
+                Sign In
+              </Button>
+            </Link>
+          </DialogActions>
+        </Dialog>
+
         <Card className={classes.card}>
           <CardContent>
             <Typography
@@ -121,7 +140,8 @@ class Signup extends Component {
               onChange={this.handleChange("password")}
               margin="normal"
             />
-            <br />{" "}
+            <br />
+            {/* ans could be - https://stackoverflow.com/a/41142436/4127966 gosh this looks zzpatchy... don't know why it needs, tried removed seems no change */}{" "}
             {this.state.error && (
               <Typography component="p" color="error">
                 <Icon color="error" className={classes.error}>
@@ -142,21 +162,6 @@ class Signup extends Component {
             </Button>
           </CardActions>
         </Card>
-        <Dialog open={this.state.open} disableBackdropClick={true}>
-          <DialogTitle>New Account</DialogTitle>
-          <DialogContent>
-            <DialogContentText>
-              New account successfully created.
-            </DialogContentText>
-          </DialogContent>
-          <DialogActions>
-            <Link to="/signin">
-              <Button color="primary" autoFocus="autoFocus" variant="raised">
-                Sign In
-              </Button>
-            </Link>
-          </DialogActions>
-        </Dialog>
       </div>
     );
   }

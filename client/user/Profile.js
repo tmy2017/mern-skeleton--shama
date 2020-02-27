@@ -34,12 +34,15 @@ const styles = theme => ({
 });
 
 class Profile extends Component {
+  //actually this is where zzcomponent got zzprops! zzcore-zzconcept-zzdev-zzlrn-zzinnerworking ((☢️ zzppppp._09._y20.0227-1526
+  //and he just zzdestructuring the propos (from zzroute component), only take out the zzmatch part! zzwow zzintrst
   constructor({ match }) {
     super();
     this.state = {
       user: "",
       redirectToSignin: false
     };
+    //also does NOT put into zzthis.state NOR zzthis.props hmm zzintrst
     this.match = match;
   }
   init = userId => {
@@ -57,10 +60,12 @@ class Profile extends Component {
       }
     });
   };
+  // this relates to zzderivedstate https://reactjs.org/docs/react-component.html#static-getderivedstatefromprops ((ℹ️ zzpp._09._y20.0227-1452))
   componentWillReceiveProps = props => {
     this.init(props.match.params.userId);
   };
   componentDidMount = () => {
+    //zzPowerful zzreact-router the zzmatch can be the zzget zzurl zzparameter so to pass the userId here into zzchild zzcomponent! ((ℹ️ zzpp._09._y20.0227-1433))
     this.init(this.match.params.userId);
   };
   render() {

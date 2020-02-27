@@ -12,6 +12,8 @@ import Avatar from "material-ui/Avatar";
 import IconButton from "material-ui/IconButton";
 import Typography from "material-ui/Typography";
 import ArrowForward from "material-ui-icons/ArrowForward";
+// this is really from an icon, I need to know this? gosh zzreact zzMUI, then how to know which to zzimport? ((⚪️ zzp._08._y20.0223-1658))
+// zzref - https://material-ui.com/components/icons/#material-icons
 import Person from "material-ui-icons/Person";
 import { Link } from "react-router-dom";
 import { list } from "./api-user.js";
@@ -57,6 +59,7 @@ class Users extends Component {
                 <ListItem button>
                   <ListItemAvatar>
                     <Avatar>
+                      {/* wow this is like an icon? */}
                       <Person />
                     </Avatar>
                   </ListItemAvatar>
